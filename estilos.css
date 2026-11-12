@@ -1,0 +1,61 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    background: #eaf2ff url("imagens/fundo.jpg") center / cover fixed no-repeat;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 24pt;
+    font-weight: bold;
+}
+
+header {
+    padding: 20px;
+    color: white;
+    text-align: center;
+    background-color: rgb(31 41 55 / 85%);
+    border: 5pt solid #2563eb;
+    border-radius: 8px;
+}
+
+.dashboard-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Aplica às caixas com class="widget card" */
+.widget.card {
+    flex: 1 1 280px;
+    padding: 15px;
+    background-color: white;
+    border: 5pt solid #2563eb;
+    border-radius: 8px;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 4px 8px;
+    font-size: 12pt;
+    background-color: #dbeafe;
+    border-radius: 8px;
+}
+
+button {
+    padding: 10px 16px;
+    color: white;
+    font: inherit;
+    background-color: #2563eb;
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
