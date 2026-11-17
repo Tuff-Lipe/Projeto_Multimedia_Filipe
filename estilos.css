@@ -1,61 +1,135 @@
-body {
-    min-height: 100vh;
-    margin: 0;
-    padding: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 12pt;
-    background: #eaf2ff url("imagens/fundo.jpg") center / cover fixed no-repeat;
+:root {
+    color-scheme: light; /* Indica ao navegador que a página usa um esquema claro. */
+    --color-background: #f5f3ef; /* Cor de fundo principal, em tom bege claro. */
+    --color-surface: #ffffff; /* Cor branca para superfícies como os cartões. */
+    --color-ink: #242321; /* Cor principal do texto. */
+    --color-muted: #77736c; /* Cor secundária para texto menos destacado. */
+    --color-border: #e7e3dc; /* Cor neutra para as bordas. */
+    --color-accent: #d8cbb8; /* Cor de destaque bege. */
+    --color-accent-soft: #f0ece5; /* Versão suave da cor de destaque. */
+    --shadow-card: 0 12px 32px rgb(36 35 33 / 6%); /* Sombra subtil dos cartões. */
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 24pt;
-    font-weight: bold;
+* {
+    box-sizing: border-box; /* Inclui padding e borda nas dimensões dos elementos. */
+}
+
+body {
+    min-height: 100vh; /* Faz o corpo ocupar pelo menos toda a altura da janela. */
+    margin: 0; /* Remove a margem padrão do navegador. */
+    padding: clamp(20px, 5vw, 64px); /* Ajusta o espaçamento à largura do ecrã. */
+    color: var(--color-ink); /* Aplica a cor principal ao texto. */
+    font-family: Inter, "Segoe UI", Arial, sans-serif; /* Define a família tipográfica. */
+    font-size: 16px; /* Define o tamanho base do texto. */
+    line-height: 1.6; /* Melhora a leitura com espaçamento entre linhas. */
+    background: var(--color-background); /* Aplica o fundo bege claro. */
 }
 
 header {
-    padding: 20px;
-    color: white;
-    text-align: center;
-    background-color: rgb(31 41 55 / 85%);
-    border: 5pt solid #2563eb;
-    border-radius: 8px;
+    max-width: 1200px; /* Limita a largura do cabeçalho em ecrãs grandes. */
+    margin: 0 auto; /* Centra o cabeçalho horizontalmente. */
+    padding: clamp(32px, 7vw, 76px) 24px; /* Ajusta o espaço interno ao ecrã. */
+    color: #f8f7f4; /* Define texto quase branco sobre o fundo escuro. */
+    text-align: center; /* Centra o conteúdo do cabeçalho. */
+    background: #292825; /* Aplica um fundo cinzento muito escuro. */
+    border: 1px solid rgb(255 255 255 / 8%); /* Acrescenta uma borda branca discreta. */
+    border-radius: 20px; /* Arredonda os cantos do cabeçalho. */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0; /* Remove a margem superior padrão dos títulos. */
+    font-family: Inter, "Segoe UI", Arial, sans-serif; /* Mantém a tipografia consistente. */
+    font-weight: 600; /* Dá aos títulos um peso semibold. */
+    line-height: 1.2; /* Aproxima as linhas dos títulos. */
+    letter-spacing: -0.035em; /* Reduz ligeiramente o espaço entre caracteres. */
+}
+
+header h1 {
+    max-width: 800px; /* Evita que o título fique demasiado largo. */
+    margin: 0 auto 12px; /* Centra o título e separa-o do parágrafo. */
+    font-size: clamp(2rem, 5vw, 3.5rem); /* Adapta o tamanho do título ao ecrã. */
+}
+
+header p {
+    margin: 0; /* Remove as margens padrão do parágrafo. */
+    color: #d1cec7; /* Usa um cinzento claro para o texto secundário. */
+    font-size: clamp(1rem, 2vw, 1.125rem); /* Adapta o tamanho do texto ao ecrã. */
 }
 
 .dashboard-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin-top: 20px;
+    display: flex; /* Organiza os cartões com Flexbox. */
+    flex-wrap: wrap; /* Permite que os cartões passem para a linha seguinte. */
+    gap: 20px; /* Define o espaço entre cartões. */
+    max-width: 1200px; /* Mantém a grelha dentro de uma largura confortável. */
+    margin: 28px auto 0; /* Centra a grelha e afasta-a do cabeçalho. */
 }
 
-/* Aplica às caixas com class="widget card" */
 .widget.card {
-    flex: 1 1 280px;
-    padding: 15px;
-    background-color: white;
-    border: 5pt solid #2563eb;
-    border-radius: 8px;
+    flex: 1 1 280px; /* Permite crescer e encolher, com largura base de 280 px. */
+    padding: 28px; /* Define o espaço interno do cartão. */
+    background: var(--color-surface); /* Aplica o fundo branco ao cartão. */
+    border: 1px solid var(--color-border); /* Desenha uma borda cinzenta discreta. */
+    border-radius: 16px; /* Arredonda os cantos do cartão. */
+    box-shadow: var(--shadow-card); /* Adiciona uma sombra subtil. */
+    transition: transform 180ms ease, box-shadow 180ms ease; /* Suaviza as alterações ao passar o rato. */
+}
+
+.widget.card:hover {
+    transform: translateY(-3px); /* Eleva ligeiramente o cartão ao passar o rato. */
+    box-shadow: 0 18px 40px rgb(36 35 33 / 10%); /* Reforça a sombra no estado hover. */
+}
+
+.widget.card h3 {
+    margin: 18px 0 10px; /* Controla o espaço à volta do título do cartão. */
+    font-size: 1.5rem; /* Define o tamanho do título do cartão. */
+}
+
+.widget.card p {
+    margin: 0 0 24px; /* Afasta o parágrafo do botão seguinte. */
+    color: var(--color-muted); /* Usa uma cor mais suave para a descrição. */
 }
 
 .status-badge {
-    display: inline-block;
-    padding: 4px 8px;
-    font-size: 12pt;
-    background-color: #dbeafe;
-    border-radius: 8px;
+    display: inline-block; /* Permite definir dimensões mantendo o elemento em linha. */
+    padding: 5px 11px; /* Define o espaço interno da etiqueta. */
+    color: #5e5549; /* Define a cor escura do texto da etiqueta. */
+    font-size: 0.75rem; /* Reduz o tamanho do texto da etiqueta. */
+    font-weight: 600; /* Destaca o texto da etiqueta. */
+    letter-spacing: 0.04em; /* Aumenta ligeiramente o espaço entre caracteres. */
+    background: var(--color-accent-soft); /* Aplica um fundo bege suave. */
+    border: 1px solid var(--color-accent); /* Contorna a etiqueta com bege. */
+    border-radius: 999px; /* Torna a etiqueta em formato de cápsula. */
 }
 
 button {
-    padding: 10px 16px;
-    color: white;
-    font: inherit;
-    background-color: #2563eb;
-    border: 0;
-    border-radius: 6px;
-    cursor: pointer;
+    padding: 11px 18px; /* Define o tamanho interno do botão. */
+    color: #fff; /* Define o texto do botão como branco. */
+    font: inherit; /* Herda a família tipográfica do elemento pai. */
+    font-size: 0.95rem; /* Define o tamanho do texto do botão. */
+    font-weight: 600; /* Dá destaque ao texto do botão. */
+    background: #292825; /* Aplica um fundo escuro ao botão. */
+    border: 1px solid #292825; /* Cria uma borda da mesma cor do fundo. */
+    border-radius: 8px; /* Arredonda os cantos do botão. */
+    cursor: pointer; /* Mostra que o botão pode ser clicado. */
+    transition: color 160ms ease, background-color 160ms ease, border-color 160ms ease; /* Suaviza as mudanças visuais. */
 }
 
 button:hover {
-    background-color: #1d4ed8;
+    color: var(--color-ink); /* Escurece o texto quando o rato passa por cima. */
+    background: var(--color-accent); /* Muda o fundo para bege no hover. */
+    border-color: var(--color-accent); /* Ajusta a borda ao novo fundo. */
+}
+
+button:focus-visible {
+    outline: 3px solid var(--color-accent); /* Mostra um contorno de foco acessível. */
+    outline-offset: 3px; /* Afasta o contorno do botão. */
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important; /* Evita deslocamentos animados para quem os reduz. */
+        transition-duration: 0.01ms !important; /* Minimiza animações para respeitar esta preferência. */
+    }
 }
