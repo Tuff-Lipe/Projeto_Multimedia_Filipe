@@ -2,7 +2,7 @@
 Projeto de oficina de multimédia de programação com Inteligência Artificial
 
 0. O que deve constar no README.nb
-Nome da Aplicação / Dashboard Web:
+Nome da Aplicação / Dashboard Web: Website Interativo
 Disciplina: Oficina de Multimédia - 12.º Ano - CRSI
 Ano Letivo: 2026/2027
 Autor: Filipe Ferreira
@@ -10,17 +10,16 @@ Turma: 12.º A3
 Link da Aplicação Web: 
 
 1. Visão Geral do Projeto
-Descrição: Explica em 2 a 3 frases o objetivo do teu Dashboard / Web App
-Proposta Escolhida: Proposta 1 ou Proposta 2.
+Descrição: O objetivo do meu website é criar algo com aspeto moderno e visualmente bonito na qual pessoas podem fazer testes ou divertir-se
+Proposta Escolhida: Proposta 1
 
 2. Estrutura do Código e Funcionalidades Integradas
-Explica se foram adaptados os exercícios das fichas ou se forma utilizados novos
-exercícios com IA.
+Utilizei apenas exercícios feitos em aula, estes sendo o quiz, o qual adaptei para ser apenas sobre geografia e adicionei mais perguntas. O jogo da adivinha e o word cloud.
 
 3. Registo de Utilização da IA
 Para demonstrares como trabalhaste em parceria com o Copilot, Gemini, Claude,
 Mistral, etc., regista:
-- Prompt para conversão Web/HTML: 
+- Prompt para conversão Web/HTML: Utilizando os ficheiros fornecidos (Dashboard_Filipe.ipynb e estilos.css) cria um website no qual estejam divididos em três partes os três programas diferentes, criando o visual do website utilizando apenas a folha de estilos enviada em anexo.
 - Prompt para ampliação e construção de funcionalidades: 
 - Dificuldades e erros corrigidos com a IA:
 - Otimização de Layout: O que sugeriste à IA para alterar no design - cores,
