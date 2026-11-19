@@ -1,0 +1,261 @@
+:root { /* Define as cores e os valores reutilizados em todo o site. */
+    color-scheme: light; /* Mantém controlos nativos com aspeto claro. */
+    --color-background: #f5f3ef; /* Define o fundo bege muito claro. */
+    --color-surface: #fff; /* Define o fundo branco dos widgets. */
+    --color-ink: #242321; /* Define a cor principal do texto. */
+    --color-muted: #77736c; /* Define a cor do texto secundário. */
+    --color-border: #e7e3dc; /* Define a cor das bordas subtis. */
+    --color-accent: #d8cbb8; /* Define o tom bege de destaque. */
+    --color-accent-soft: #f0ece5; /* Define o tom suave para etiquetas e realces. */
+    --color-success: #42634d; /* Define a cor das mensagens de sucesso. */
+    --color-error: #9a5148; /* Define a cor das mensagens de erro. */
+    --shadow-card: 0 12px 32px rgb(36 35 33 / 6%); /* Define a sombra discreta dos cartões. */
+} /* Termina as variáveis globais. */
+* { /* Aplica uma regra consistente a todos os elementos. */
+    box-sizing: border-box; /* Inclui bordas e espaçamento nas dimensões dos elementos. */
+} /* Termina a regra global. */
+body { /* Define o estilo base da página. */
+    min-height: 100vh; /* Faz o fundo ocupar pelo menos toda a janela. */
+    margin: 0; /* Remove a margem padrão do navegador. */
+    padding: clamp(20px, 5vw, 64px); /* Adapta o espaço exterior ao tamanho do ecrã. */
+    color: var(--color-ink); /* Aplica a cor principal ao texto. */
+    font-family: Inter, "Segoe UI", Arial, sans-serif; /* Define uma tipografia moderna com alternativas locais. */
+    font-size: 16px; /* Define o tamanho base do texto. */
+    line-height: 1.6; /* Melhora a legibilidade do conteúdo. */
+    background: var(--color-background); /* Aplica o fundo bege claro. */
+} /* Termina o estilo base da página. */
+button, input, select, textarea { /* Uniformiza a tipografia dos controlos. */
+    font: inherit; /* Faz os controlos herdarem a tipografia da página. */
+} /* Termina a regra dos controlos. */
+.site-header { /* Estiliza o cabeçalho principal. */
+    max-width: 1200px; /* Limita a largura do cabeçalho em ecrãs grandes. */
+    margin: 0 auto; /* Centra o cabeçalho na página. */
+    padding: clamp(32px, 7vw, 68px) 24px; /* Ajusta o espaço interno ao tamanho do ecrã. */
+    color: #f8f7f4; /* Torna o texto legível sobre o fundo escuro. */
+    text-align: center; /* Centra o conteúdo do cabeçalho. */
+    background: #292825; /* Aplica um fundo cinzento quase preto. */
+    border-radius: 20px; /* Arredonda os cantos do cabeçalho. */
+} /* Termina o estilo do cabeçalho. */
+.eyebrow { /* Destaca o pequeno rótulo acima dos títulos. */
+    margin: 0 0 10px; /* Separa o rótulo do título seguinte. */
+    color: #c9c0b3; /* Usa um tom bege claro no rótulo. */
+    font-size: 0.75rem; /* Reduz o tamanho do rótulo. */
+    font-weight: 700; /* Dá ênfase ao rótulo. */
+    letter-spacing: 0.16em; /* Espaça as letras do rótulo. */
+    text-transform: uppercase; /* Apresenta o rótulo em maiúsculas. */
+} /* Termina o estilo do rótulo. */
+h1, h2, h3 { /* Uniformiza os títulos do site. */
+    margin-top: 0; /* Remove a margem superior padrão. */
+    font-weight: 600; /* Usa um peso de letra equilibrado. */
+    line-height: 1.2; /* Aproxima as linhas dos títulos. */
+    letter-spacing: -0.035em; /* Dá aos títulos um aspeto mais compacto. */
+} /* Termina as regras gerais dos títulos. */
+.site-header h1 { /* Estiliza o título principal. */
+    max-width: 800px; /* Evita que o título fique demasiado extenso. */
+    margin: 0 auto 12px; /* Centra o título e separa-o da descrição. */
+    font-size: clamp(2rem, 5vw, 3.5rem); /* Adapta o título à largura do ecrã. */
+} /* Termina o estilo do título principal. */
+.site-header > p:last-child { /* Estiliza a descrição junto ao título principal. */
+    margin: 0; /* Remove o espaço padrão do parágrafo. */
+    color: #d1cec7; /* Usa cinzento claro para a descrição. */
+} /* Termina o estilo da descrição. */
+.dashboard-grid { /* Organiza os três widgets numa grelha responsiva. */
+    display: grid; /* Ativa o sistema de grelha CSS. */
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /* Cria três colunas iguais em ecrãs largos. */
+    gap: 20px; /* Define o espaço entre cartões. */
+    max-width: 1200px; /* Mantém os widgets numa largura confortável. */
+    margin: 28px auto 0; /* Centra a grelha e afasta-a do cabeçalho. */
+    align-items: start; /* Mantém os widgets alinhados pelo topo. */
+} /* Termina a grelha do dashboard. */
+.widget { /* Define a aparência comum aos três widgets. */
+    min-width: 0; /* Permite que os cartões encolham sem transbordar a grelha. */
+    padding: 26px; /* Cria espaço interno nos cartões. */
+    background: var(--color-surface); /* Aplica o fundo branco aos cartões. */
+    border: 1px solid var(--color-border); /* Desenha uma borda discreta. */
+    border-radius: 16px; /* Arredonda os cantos dos cartões. */
+    box-shadow: var(--shadow-card); /* Aplica a sombra subtil partilhada. */
+} /* Termina o estilo comum aos widgets. */
+.widget h2 { /* Estiliza os títulos dos widgets. */
+    margin: 14px 0 8px; /* Define o espaço à volta do título. */
+    font-size: 1.4rem; /* Define um tamanho claro sem competir com o título principal. */
+} /* Termina o estilo dos títulos dos widgets. */
+.widget-description { /* Estiliza a introdução de cada widget. */
+    min-height: 52px; /* Mantém as descrições alinhadas em ecrãs largos. */
+    margin: 0 0 20px; /* Separa a descrição dos controlos. */
+    color: var(--color-muted); /* Apresenta a descrição em cinzento. */
+    font-size: 0.92rem; /* Reduz ligeiramente o texto de apoio. */
+} /* Termina o estilo das descrições. */
+.widget-number { /* Estiliza o número identificador de cada widget. */
+    display: inline-flex; /* Permite centrar o número na etiqueta. */
+    width: 34px; /* Define a largura da etiqueta numerada. */
+    height: 34px; /* Define a altura da etiqueta numerada. */
+    align-items: center; /* Centra verticalmente o número. */
+    justify-content: center; /* Centra horizontalmente o número. */
+    color: #5e5549; /* Define a cor do número. */
+    font-size: 0.8rem; /* Define o tamanho do número. */
+    font-weight: 700; /* Destaca o número. */
+    background: var(--color-accent-soft); /* Aplica fundo bege suave. */
+    border: 1px solid var(--color-accent); /* Contorna a etiqueta com bege. */
+    border-radius: 50%; /* Torna a etiqueta circular. */
+} /* Termina o estilo da etiqueta numerada. */
+label { /* Destaca as instruções dos campos de formulário. */
+    display: block; /* Coloca cada etiqueta numa linha própria. */
+    margin: 0 0 7px; /* Separa a etiqueta do campo correspondente. */
+    font-size: 0.85rem; /* Define um tamanho confortável para as etiquetas. */
+    font-weight: 600; /* Distingue a etiqueta do texto de apoio. */
+} /* Termina o estilo das etiquetas. */
+textarea, input[type="number"], select { /* Uniformiza os campos editáveis. */
+    width: 100%; /* Faz os campos ocupar a largura disponível. */
+    min-height: 46px; /* Facilita a utilização dos campos. */
+    padding: 10px 12px; /* Cria espaço interno nos campos. */
+    color: var(--color-ink); /* Define a cor do texto dos campos. */
+    background: #fff; /* Mantém os campos claros. */
+    border: 1px solid var(--color-border); /* Contorna os campos de forma discreta. */
+    border-radius: 8px; /* Arredonda os cantos dos campos. */
+} /* Termina o estilo dos campos. */
+textarea { /* Define características específicas da área de texto. */
+    min-height: 126px; /* Dá espaço para inserir várias palavras. */
+    resize: vertical; /* Permite aumentar a altura da área de texto. */
+} /* Termina o estilo da área de texto. */
+textarea:focus, input:focus, select:focus { /* Indica visualmente o campo ativo. */
+    border-color: #9d8b72; /* Realça a borda do campo selecionado. */
+    outline: 3px solid rgb(216 203 184 / 40%); /* Acrescenta um contorno de foco visível. */
+    outline-offset: 1px; /* Afasta ligeiramente o contorno da borda. */
+} /* Termina o estilo de foco dos campos. */
+.field-group { /* Agrupa etiqueta e campo de formulário. */
+    margin-bottom: 14px; /* Separa os grupos de campos. */
+} /* Termina o grupo de campos. */
+.button-row { /* Alinha botões lado a lado quando necessário. */
+    display: flex; /* Ativa o alinhamento flexível. */
+    flex-wrap: wrap; /* Permite que os botões passem à linha seguinte. */
+    gap: 10px; /* Define o espaço entre botões. */
+    margin-top: 14px; /* Afasta os botões dos campos anteriores. */
+} /* Termina o alinhamento de botões. */
+button { /* Define a aparência base dos botões. */
+    min-height: 44px; /* Cria uma área de clique acessível. */
+    padding: 10px 16px; /* Define o espaço interno do botão. */
+    color: #fff; /* Define texto branco sobre fundo escuro. */
+    font-weight: 600; /* Dá destaque ao texto do botão. */
+    background: #292825; /* Aplica um fundo escuro. */
+    border: 1px solid #292825; /* Mantém a borda alinhada com o fundo. */
+    border-radius: 8px; /* Arredonda os cantos do botão. */
+    cursor: pointer; /* Indica que o botão pode ser acionado. */
+    transition: color 160ms ease, background-color 160ms ease, border-color 160ms ease; /* Suaviza o estado hover. */
+} /* Termina o estilo base dos botões. */
+button:hover { /* Define o estado do botão ao passar o rato. */
+    color: var(--color-ink); /* Escurece o texto no estado hover. */
+    background: var(--color-accent); /* Muda o fundo para bege. */
+    border-color: var(--color-accent); /* Combina a borda com o fundo. */
+} /* Termina o estado hover dos botões. */
+button:focus-visible { /* Realça o botão quando navegado pelo teclado. */
+    outline: 3px solid var(--color-accent); /* Desenha um contorno de foco acessível. */
+    outline-offset: 3px; /* Afasta o contorno do botão. */
+} /* Termina o estado de foco dos botões. */
+button:disabled { /* Distingue visualmente botões indisponíveis. */
+    opacity: 0.55; /* Reduz o destaque do botão desativado. */
+    cursor: not-allowed; /* Indica que o botão não está disponível. */
+} /* Termina o estado desativado dos botões. */
+.secondary-button { /* Define a variante secundária dos botões. */
+    color: var(--color-ink); /* Usa texto escuro no botão secundário. */
+    background: var(--color-accent-soft); /* Usa um fundo bege suave. */
+    border-color: var(--color-border); /* Mantém a borda discreta. */
+} /* Termina o botão secundário. */
+.secondary-button:hover { /* Realça o botão secundário ao passar o rato. */
+    background: var(--color-accent); /* Escurece suavemente o fundo bege. */
+    border-color: var(--color-accent); /* Ajusta a borda ao fundo. */
+} /* Termina o hover do botão secundário. */
+.status-message { /* Reserva espaço para mensagens dos programas. */
+    min-height: 48px; /* Evita saltos de layout quando aparece uma mensagem. */
+    margin: 14px 0 0; /* Separa a mensagem dos controlos. */
+    color: var(--color-muted); /* Usa cor secundária para o estado neutro. */
+    font-size: 0.9rem; /* Define o tamanho do texto de estado. */
+} /* Termina o estilo das mensagens. */
+.status-message[data-state="success"] { /* Apresenta mensagens positivas. */
+    color: var(--color-success); /* Usa verde escuro para indicar sucesso. */
+} /* Termina o estado de sucesso. */
+.status-message[data-state="error"] { /* Apresenta mensagens de erro ou aviso. */
+    color: var(--color-error); /* Usa vermelho escuro para sinalizar um problema. */
+} /* Termina o estado de erro. */
+.word-cloud { /* Cria uma área para as palavras geradas. */
+    display: flex; /* Organiza as palavras com Flexbox. */
+    min-height: 180px; /* Reserva espaço para a nuvem de palavras. */
+    flex-wrap: wrap; /* Permite que as palavras ocupem várias linhas. */
+    align-items: center; /* Centra as palavras verticalmente. */
+    justify-content: center; /* Centra as palavras horizontalmente. */
+    gap: 5px 12px; /* Separa as palavras horizontal e verticalmente. */
+    margin-top: 18px; /* Afasta a nuvem dos controlos. */
+    padding: 16px; /* Cria espaço entre as palavras e a borda. */
+    overflow: hidden; /* Impede que palavras compridas transbordem. */
+    background: #faf9f7; /* Diferencia suavemente a área da nuvem. */
+    border: 1px dashed var(--color-border); /* Assinala a área sem pesar visualmente. */
+    border-radius: 12px; /* Arredonda os cantos da área. */
+} /* Termina a área da nuvem. */
+.cloud-word { /* Define a aparência base de cada palavra gerada. */
+    display: inline-block; /* Mantém cada palavra como unidade visual. */
+    max-width: 100%; /* Impede que uma palavra ultrapasse a área. */
+    overflow-wrap: anywhere; /* Permite quebrar palavras excepcionalmente compridas. */
+    font-weight: 600; /* Destaca as palavras da nuvem. */
+    line-height: 1.15; /* Mantém a nuvem compacta. */
+} /* Termina o estilo das palavras. */
+.game-counter { /* Destaca a contagem de tentativas ou pontuação. */
+    display: inline-block; /* Mantém a contagem compacta. */
+    margin-top: 14px; /* Separa a contagem dos campos. */
+    padding: 5px 10px; /* Cria espaço interno no indicador. */
+    color: #5e5549; /* Aplica texto castanho acinzentado. */
+    font-size: 0.8rem; /* Reduz o tamanho do indicador. */
+    font-weight: 600; /* Destaca o valor apresentado. */
+    background: var(--color-accent-soft); /* Aplica fundo bege claro. */
+    border-radius: 999px; /* Dá ao indicador formato de cápsula. */
+} /* Termina o indicador de contagem. */
+.quiz-progress { /* Estiliza a barra de progresso do quiz. */
+    width: 100%; /* Faz a barra ocupar a largura do widget. */
+    height: 7px; /* Mantém a barra de progresso discreta. */
+    margin: 4px 0 18px; /* Separa a barra dos elementos próximos. */
+    overflow: hidden; /* Mantém o preenchimento dentro dos cantos arredondados. */
+    background: var(--color-accent-soft); /* Aplica fundo bege à parte por preencher. */
+    border-radius: 999px; /* Arredonda a barra de progresso. */
+} /* Termina a estrutura da barra de progresso. */
+.quiz-progress span { /* Estiliza o preenchimento da barra de progresso. */
+    display: block; /* Permite controlar largura e altura do preenchimento. */
+    width: 0; /* Começa sem progresso. */
+    height: 100%; /* Preenche a altura da barra. */
+    background: #8b7962; /* Usa um tom bege escuro para o progresso. */
+    transition: width 180ms ease; /* Anima o progresso entre perguntas. */
+} /* Termina o preenchimento da barra. */
+.site-footer { /* Estiliza o rodapé do site. */
+    max-width: 1200px; /* Alinha o rodapé com o conteúdo principal. */
+    margin: 24px auto 0; /* Centra o rodapé e separa-o dos widgets. */
+    color: var(--color-muted); /* Usa texto discreto no rodapé. */
+    font-size: 0.8rem; /* Reduz o tamanho do texto do rodapé. */
+    text-align: center; /* Centra o texto do rodapé. */
+} /* Termina o estilo do rodapé. */
+@media (max-width: 980px) { /* Ajusta o dashboard a tablets e ecrãs médios. */
+    .dashboard-grid { /* Altera o número de colunas do dashboard. */
+        grid-template-columns: repeat(2, minmax(0, 1fr)); /* Mostra dois cartões por linha. */
+    } /* Termina o ajuste da grelha. */
+    .widget:last-child { /* Faz o último widget ocupar a largura disponível. */
+        grid-column: 1 / -1; /* Estende o quiz pelas duas colunas. */
+    } /* Termina o ajuste do último widget. */
+} /* Termina os ajustes para ecrãs médios. */
+@media (max-width: 640px) { /* Ajusta o site a telemóveis. */
+    body { /* Reduz o espaço exterior em ecrãs pequenos. */
+        padding: 18px; /* Evita margens excessivas no telemóvel. */
+    } /* Termina o ajuste do corpo. */
+    .dashboard-grid { /* Reorganiza os widgets numa só coluna. */
+        grid-template-columns: minmax(0, 1fr); /* Apresenta um widget por linha. */
+        gap: 14px; /* Reduz o espaço entre cartões. */
+        margin-top: 18px; /* Aproxima a grelha do cabeçalho. */
+    } /* Termina o ajuste da grelha móvel. */
+    .widget:last-child { /* Restaura o fluxo normal do último widget. */
+        grid-column: auto; /* Faz o quiz ocupar apenas a coluna única. */
+    } /* Termina o ajuste do último widget. */
+    .widget { /* Reduz o preenchimento dos cartões no telemóvel. */
+        padding: 21px; /* Preserva espaço útil para os controlos. */
+    } /* Termina o ajuste dos cartões. */
+} /* Termina os ajustes para telemóveis. */
+@media (prefers-reduced-motion: reduce) { /* Respeita a preferência por movimento reduzido. */
+    *, *::before, *::after { /* Aplica a preferência a todos os elementos. */
+        scroll-behavior: auto !important; /* Evita deslocamentos animados. */
+        transition-duration: 0.01ms !important; /* Minimiza as transições visuais. */
+    } /* Termina a regra de movimento reduzido. */
+} /* Termina a preferência de acessibilidade. */
