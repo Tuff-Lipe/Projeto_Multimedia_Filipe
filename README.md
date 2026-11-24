@@ -7,7 +7,7 @@ Disciplina: Oficina de Multimédia - 12.º Ano - CRSI
 Ano Letivo: 2026/2027
 Autor: Filipe Ferreira
 Turma: 12.º A3
-Link da Aplicação Web: 
+Link da Aplicação Web: file:///Users/filipe/Documents/OM_2627/Programação/Trabalho_IA/index.html
 
 1. Visão Geral do Projeto
 Descrição: O objetivo do meu website é criar algo com aspeto moderno e visualmente bonito na qual pessoas podem fazer testes ou divertir-se
