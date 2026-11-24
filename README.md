@@ -10,6 +10,7 @@ Disciplina: Oficina de Multimédia – 12.º Ano – CRSI
 Ano Letivo: 2026/2027
 Autor: Filipe Ferreira
 Turma: 12.º A3
+Link do GitHub: https://github.com/Tuff-Lipe/Projeto_Multimedia_Filipe
 
 1. Visão Geral do Projeto
 
