@@ -1,39 +1,63 @@
 # Projeto_Multimedia_Filipe
 Projeto de oficina de multimédia de programação com Inteligência Artificial
 
-0. O que deve constar no README.nb
+README – Website Interativo
+
+0. Identificação do Projeto
+
 Nome da Aplicação / Dashboard Web: Website Interativo
-Disciplina: Oficina de Multimédia - 12.º Ano - CRSI
+Disciplina: Oficina de Multimédia – 12.º Ano – CRSI
 Ano Letivo: 2026/2027
 Autor: Filipe Ferreira
 Turma: 12.º A3
-Link da Aplicação Web:
 
 1. Visão Geral do Projeto
-Descrição: O objetivo do meu website é criar algo com aspeto moderno e visualmente bonito na qual pessoas podem fazer testes ou divertir-se
-Proposta Escolhida: Proposta 1
+
+Descrição: O objetivo deste projeto foi desenvolver um website moderno, intuitivo e visualmente apelativo, onde os utilizadores podem realizar pequenos testes, jogar e divertir-se através de diferentes atividades interativas.
+
+Proposta Escolhida: Proposta 1.
 
 2. Estrutura do Código e Funcionalidades Integradas
-Utilizei apenas exercícios feitos em aula, estes sendo o quiz, o qual adaptei para ser apenas sobre geografia e adicionei mais perguntas. O jogo da adivinha e o word cloud.
+
+O website integra três exercícios desenvolvidos anteriormente nas aulas, que foram adaptados e organizados numa única plataforma:
+
+Quiz de Geografia: Jogo de perguntas e respostas sobre conhecimentos de geografia, ao qual foram adicionadas novas perguntas.
+Jogo da Adivinha: Jogo interativo em que o utilizador tem de descobrir a resposta correta.
+Word Cloud: Ferramenta que permite criar nuvens de palavras a partir de diferentes palavras ou textos.
+O principal objetivo foi aproveitar os exercícios realizados em aula e reuni-los num website organizado e de fácil utilização.
 
 3. Registo de Utilização da IA
-Para demonstrares como trabalhaste em parceria com o Copilot, Gemini, Claude,
-Mistral, etc., regista:
-- Prompt para conversão Web/HTML: Utilizando os ficheiros fornecidos (Dashboard_Filipe.ipynb e estilos.css) cria um website no qual estejam divididos em três partes os três programas diferentes, criando o visual do website utilizando apenas a folha de estilos enviada em anexo.
-- Prompt para ampliação e construção de funcionalidades: 
-- Dificuldades e erros corrigidos com a IA:
-- Otimização de Layout: O que sugeriste à IA para alterar no design - cores,
-margens, fontes, botões?
+
+Prompt para conversão Web/HTML:
+
+"Utilizando os ficheiros fornecidos (Dashboard_Filipe.ipynb e estilos.css), cria um website no qual estejam divididos em três partes os três programas diferentes, criando o visual do website utilizando apenas a folha de estilos enviada em anexo."
+
+Prompt para ampliação e construção de funcionalidades:
+
+"Adapta os exercícios existentes para funcionarem corretamente num website, mantendo as suas funcionalidades principais e garantindo que cada um dos três programas pode ser utilizado de forma independente."
+
+Dificuldades e erros corrigidos com a IA:
+
+A IA foi utilizada para ajudar a identificar e corrigir erros no código, resolver problemas de funcionamento dos exercícios e adaptar os programas originais para o ambiente Web.
+
+Otimização de Layout:
+
+Foi pedido à IA que melhorasse a organização visual do website, tornando-o mais moderno, intuitivo e agradável. Foram trabalhados aspetos como o posicionamento dos elementos, as cores, os espaçamentos, as fontes e os botões, procurando manter o estilo da folha de CSS fornecida.
 
 4. Estrutura de Ficheiros do Repositório
-Listagem simples dos ficheiros presentes na pasta:
-- index.html – página principal do Dashboard / Web App
-- app.py - Ficheiro principal da aplicação.
-- style.css (Se necessário) - Folha de estilos para o layout Web
-- README.md - Este relatório de projeto.
-- Assets - Imagens, nuvens de palavras geradas, recursos utilizados, etc.
+
+index.html – Página principal do website.
+Dashboard_Filipe.py – Ficheiro principal da aplicação, caso seja utilizado.
+estilos.css – Folha de estilos responsável pelo design e apresentação visual.
+README.md – Documento com a descrição e informação do projeto.
+Assets/ – Não necessário
 
 5. Reflexão Crítica e Aprendizagem
-Desenvolve um pequeno texto refletivo sobre o projeto que inclua:
-O que correu melhor durante o desenvolvimento. Qual foi a maior dificuldade. Como é
-que a Inteligência Artificial mudou a tua forma de programar?
+
+Durante o desenvolvimento deste projeto, considero que o que correu melhor foi conseguir reunir três exercícios diferentes num único website, criando uma plataforma mais organizada e apelativa.
+
+Uma das maiores dificuldades foi adaptar os programas realizados em aula para funcionarem corretamente num website, mantendo as suas funcionalidades originais.
+
+A Inteligência Artificial foi uma ferramenta bastante útil ao longo do projeto, permitindo acelerar o desenvolvimento, encontrar soluções para alguns erros e melhorar o aspeto visual do website. No entanto, também foi importante analisar e testar as sugestões dadas pela IA, de forma a garantir que o resultado final correspondia ao pretendido.
+
+Este projeto permitiu-me compreender melhor como a IA pode ser utilizada como ferramenta de apoio à programação e ao desenvolvimento Web.
